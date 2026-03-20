@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-sky-50 text-sky-950 antialiased;
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-sky-300 rounded-full hover:bg-sky-400 transition-colors;
+}
+
+/* Jeopardy-style grid animations */
+.jeopardy-card {
+  perspective: 1000px;
+}
+
+.jeopardy-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.jeopardy-card-revealed {
+  transform: rotateY(180deg);
+}
